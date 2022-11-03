@@ -30,3 +30,21 @@ COMMIT, ROLLBACK, SAVEPOINT, SET TRANSACTION
 we can rollback changes if we run the rollback with the commands just to see what would change and revert it. so its good for testing things.
 we made and we can create savepoints 
 */
+
+
+use northwind;
+sELECT * FROM northwind.category;
+
+start transaction;
+update  category
+set categoryname="asdgs"
+where categoryid = 4;
+rollback;
+SELECT * FROM northwind.category;
+
+start transaction;
+update  category
+set categoryname="asdgs"
+where categoryid = 4;
+commit;
+SELECT * FROM northwind.category;
