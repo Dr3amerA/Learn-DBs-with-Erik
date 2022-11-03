@@ -21,3 +21,12 @@ game.genre_id = genre.id
 where region.id < 4
 
 
+/*
+Transactions are changes to the database. (CRUD are a type of transaction then)
+Practically we group SQL queries and we execute all of them together
+ACID - Atomicity, Consistency, Isolation, Durability   
+
+COMMIT, ROLLBACK, SAVEPOINT, SET TRANSACTION
+we can rollback changes if we run the rollback with the commands just to see what would change and revert it. so its good for testing things.
+we made and we can create savepoints 
+*/
